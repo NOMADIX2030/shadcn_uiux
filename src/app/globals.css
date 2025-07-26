@@ -1,26 +1,142 @@
-@import "tailwindcss";
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  /* SEO 표준에 따른 H1~H6 태그 스타일 */
+  /* 계층 구조: H1 > H2 > H3 > H4 > H5 > H6 */
+  /* 가독성: 적절한 폰트 크기, 행간, 여백 */
+  /* 시각적 구분: 각 레벨별 명확한 구분 */
+  /* 접근성: 스크린 리더 친화적 */
+  
+  h1 {
+    @apply text-5xl font-black leading-tight tracking-tight mb-6 mt-8;
+    /* 가장 큰 제목 - 페이지당 하나만 사용 권장 */
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    line-height: 1.1;
+  }
+  
+  h2 {
+    @apply text-4xl font-bold leading-tight tracking-tight mb-5 mt-7;
+    /* 주요 섹션 제목 */
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+  }
+  
+  h3 {
+    @apply text-3xl font-semibold leading-tight tracking-tight mb-4 mt-6;
+    /* 하위 섹션 제목 */
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.3;
+  }
+  
+  h4 {
+    @apply text-2xl font-semibold leading-tight tracking-tight mb-3 mt-5;
+    /* 세부 섹션 제목 */
+    font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+    line-height: 1.4;
+  }
+  
+  h5 {
+    @apply text-xl font-medium leading-tight tracking-tight mb-2 mt-4;
+    /* 작은 섹션 제목 */
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    line-height: 1.5;
+  }
+  
+  h6 {
+    @apply text-lg font-medium leading-tight tracking-tight mb-2 mt-3;
+    /* 가장 작은 제목 */
+    font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+  }
+  
+  /* 제목 태그들의 공통 스타일 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground;
+    /* 스크린 리더를 위한 접근성 개선 */
+    scroll-margin-top: 2rem;
+  }
+  
+  /* 제목 태그 호버 효과 (선택적) */
+  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    @apply text-primary transition-colors duration-200;
+  }
+  
+  /* 모바일에서의 제목 크기 조정 */
+  @media (max-width: 768px) {
+    h1 {
+      @apply text-4xl mb-4 mt-6;
+    }
+    h2 {
+      @apply text-3xl mb-3 mt-5;
+    }
+    h3 {
+      @apply text-2xl mb-3 mt-4;
+    }
+    h4 {
+      @apply text-xl mb-2 mt-3;
+    }
+    h5 {
+      @apply text-lg mb-2 mt-2;
+    }
+    h6 {
+      @apply text-base mb-1 mt-2;
+    }
+  }
 }
