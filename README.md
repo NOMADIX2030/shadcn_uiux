@@ -1,6 +1,14 @@
 # 🚀 Modern Blog Platform
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/NOMADIX2030/shadcn_uiux)
+[![Next.js](https://img.shields.io/badge/Next.js-15.4.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17.5-blue?style=for-the-badge&logo=postgresql)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 현대적인 블로그 플랫폼으로, **Next.js 15.4.4**, **shadcn/ui**, **PostgreSQL**을 활용하여 구축되었습니다. 최신 보안 권장사항을 적용한 안전하고 확장 가능한 시스템을 제공합니다.
+
+> 🌟 **GitHub 저장소**: [https://github.com/NOMADIX2030/shadcn_uiux](https://github.com/NOMADIX2030/shadcn_uiux)
 
 ## 🌟 주요 기능
 
@@ -122,7 +130,18 @@ shadcn_uiux/
 
 ## 🛠️ 설치 및 설정
 
-### 1. 의존성 설치
+### 1. 저장소 클론
+```bash
+# GitHub에서 프로젝트 클론
+git clone https://github.com/NOMADIX2030/shadcn_uiux.git
+cd shadcn_uiux
+
+# 또는 SSH를 사용하는 경우
+git clone git@github.com:NOMADIX2030/shadcn_uiux.git
+cd shadcn_uiux
+```
+
+### 2. 의존성 설치
 ```bash
 npm install
 ```
@@ -444,15 +463,66 @@ MIT License
 
 ## 🤝 기여
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### **기여 방법**
+
+1. **Fork the repository**
+   ```bash
+   # GitHub에서 저장소를 포크하세요
+   # https://github.com/NOMADIX2030/shadcn_uiux
+   ```
+
+2. **Create your feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. **Commit your changes**
+   ```bash
+   git commit -m 'Add some amazing feature'
+   ```
+
+4. **Push to the branch**
+   ```bash
+   git push origin feature/amazing-feature
+   ```
+
+5. **Open a Pull Request**
+   - GitHub에서 Pull Request를 생성하세요
+   - 변경사항에 대한 상세한 설명을 포함하세요
+
+### **개발 가이드라인**
+
+- **코드 스타일**: TypeScript, ESLint 규칙 준수
+- **커밋 메시지**: 명확하고 설명적인 메시지 작성
+- **테스트**: 새로운 기능에 대한 테스트 코드 작성
+- **문서화**: 코드 변경사항에 대한 문서 업데이트
+
+### **이슈 리포트**
+
+버그를 발견하거나 기능 요청이 있으시면:
+1. [GitHub Issues](https://github.com/NOMADIX2030/shadcn_uiux/issues)에서 이슈를 생성하세요
+2. 이슈 템플릿을 사용하여 필요한 정보를 제공하세요
+3. 재현 가능한 예시와 함께 상세한 설명을 포함하세요
 
 ## 📞 지원
 
-문제가 발생하거나 질문이 있으시면 [GitHub Issues](https://github.com/NOMADIX2030/shadcn_uiux/issues)를 생성해 주세요.
+### **GitHub 지원 채널**
+
+- **이슈 리포트**: [GitHub Issues](https://github.com/NOMADIX2030/shadcn_uiux/issues)
+- **토론**: [GitHub Discussions](https://github.com/NOMADIX2030/shadcn_uiux/discussions)
+- **위키**: [GitHub Wiki](https://github.com/NOMADIX2030/shadcn_uiux/wiki)
+
+### **지원 방법**
+
+1. **버그 리포트**: [이슈 생성](https://github.com/NOMADIX2030/shadcn_uiux/issues/new?template=bug_report.md)
+2. **기능 요청**: [이슈 생성](https://github.com/NOMADIX2030/shadcn_uiux/issues/new?template=feature_request.md)
+3. **질문**: [토론 생성](https://github.com/NOMADIX2030/shadcn_uiux/discussions/new)
+
+### **커뮤니티**
+
+- **GitHub 저장소**: [https://github.com/NOMADIX2030/shadcn_uiux](https://github.com/NOMADIX2030/shadcn_uiux)
+- **라이선스**: [MIT License](https://github.com/NOMADIX2030/shadcn_uiux/blob/main/LICENSE)
+- **개발자**: NOMADIX2030
 
 ## 🎯 로드맵
 
@@ -479,10 +549,25 @@ MIT License
 
 ## 📊 프로젝트 통계
 
-- **총 커밋**: 2개
+### **GitHub 정보**
+- **저장소**: [NOMADIX2030/shadcn_uiux](https://github.com/NOMADIX2030/shadcn_uiux)
+- **총 커밋**: 3개
 - **브랜치**: main
 - **최근 업데이트**: 2025년 7월 26일
+- **라이선스**: MIT
+- **스타**: 0개
+- **포크**: 0개
+
+### **기술 스택**
 - **Next.js 버전**: 15.4.4
 - **React 버전**: 19.1.0
 - **TypeScript**: 5.x
 - **데이터베이스**: Neon PostgreSQL
+- **UI 라이브러리**: shadcn/ui
+- **스타일링**: Tailwind CSS
+
+### **프로젝트 상태**
+- **개발 상태**: 활성 개발 중
+- **배포 준비**: 완료
+- **문서화**: 완료
+- **테스트**: 기본 테스트 완료
